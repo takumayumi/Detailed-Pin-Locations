@@ -1,8 +1,15 @@
+body {
+	height: 100%;
+	margin: 100px auto;
+	padding: 0 20px;
+	width: 80%;
+}
+
 /* =================================================
  * BOOTSTRAP / SVG DATAMAPS
  =================================================== */
 
-.pcm-location {
+#content {
 	border-radius: 6px;
 	color: #000000;
 	font-family: 'Open Sans', sans-serif;
@@ -10,12 +17,20 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-.pcm-location * {
+#content * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-.pcm-location h4 {
+#content circle {
+	pointer-events: none;
+}
+h1 {
+	margin-bottom: 100px;
+	text-align: center;
+	text-decoration: underline;
+}
+#content h4 {
 	font-weight: 700;
 	color: #FFFFFF;
 	font-size: 20px;
@@ -24,16 +39,13 @@
 	text-align: center;
 	text-transform: uppercase;
 }
-.pcm-location p {
+#content p {
 	line-height: 1.4em;
 	margin: 0;
 	padding: 0;
 }
-.pcm-location path {
+#content path {
 	fill: rgb(240, 239, 239);
-}
-.pcm-location circle {
-	pointer-events: none;
 }
 
 
@@ -41,51 +53,81 @@
  * LOCATION MAP
  =================================================== */
 
-.pcm-location .map-labels {
+#content .map-labels {
 	display: block;
 	margin: 0 auto;
 	position: relative;
 	width: 829px;
 }
-.pcm-location .map-labels label {
+#content .map-labels label {
 	font-size: 10px;
 	font-weight: 700;
 	pointer-events: none;
 	position: absolute;
 	z-index: 14;
 }
-.pcm-location .map {
+#content .map {
 	background-color: #006298;
 	border-radius: 6px;
 	height: 500px;
 }
-.pcm-location .map .canada {
+#content .map .canada {
 	z-index: 10;
 }
-.pcm-location .map .usa {
-	/*margin: -137px 0 0 146px;*/
-	pointer-events: none;
-	/*position: absolute;*/
-}
-.pcm-location .map .canada #canada-map {
+#content .map .canada #canada-map {
 	display: block;
 	margin: 0 auto;
 }
-.pcm-location .map .usa #usa-map {
+#content .map .usa {
+	pointer-events: none;
+}
+#content .map .usa #usa-map {
 	display: block;
 	margin: -137px auto 0;
 	/*padding: 0 0 0 11px;*/
 }
-.pcm-location .map .usa #usa-map path {
+#content .map .usa #usa-map path {
 	pointer-events: auto;
 }
-
 
 /* =================================================
  * MODAL AND HOVERINFO
  =================================================== */
 
-.pcm-location .per-city {
+#content .hover-body {
+	padding: 0 20px;
+}
+#content .modal-dialog {
+	width: 582px;
+}
+#content .hoverinfo .hover-header,
+.modal-dialog .modal-content .modal-header {
+	background-color: #D12233;
+	padding: 15px;
+}
+#content .modal-dialog .modal-content .modal-header .close {
+	border: 1px solid #FFFFFF;
+	color: #FFFFFF;
+	font-size: 13px;
+	font-weight: 400;
+	margin: 0;
+	opacity: 1;
+	padding: 2px 8px 6px;
+}
+#content .modal-dialog .modal-content .modal-header .close:hover {
+	color: #FFFFFF;
+	opacity: 0.8;
+}
+#content .modal-dialog .modal-content {
+	border: none;
+	border-radius: 0;
+}
+#content .modal-dialog .modal-content .modal-body {
+	background-color: #FFFFFF;
+	border: none;
+	padding: 0 20px;
+}
+#content .per-city {
 	display: inline-block;
 	clear: both;
 	border-bottom: 1px solid #B7B7B7;
@@ -96,67 +138,28 @@
 	vertical-align: middle;
 	width: 270px;
 }
-.pcm-location .per-city:nth-child(even) .city-content {
+#content .per-city:nth-child(even) .city-content {
 	margin: 0 0 0 20px;
 }
-.pcm-location .per-city .city-content .city-img,
-.pcm-location .per-city .city-info {
+#content .per-city .city-content .city-img,
+#content .per-city .city-content .city-info {
 	position: absolute;
 	top: 50%;
 	transform: translate(0, -50%);
 }
-.pcm-location .per-city .city-content .city-info {
+#content .per-city .city-content .city-img {
+	width: 75px;
+}
+#content .per-city .city-content .city-info {
 	display: inline-block;
 	margin: 0 0 0 75px;
 	padding: 0 0 0 20px;
 	word-wrap: break-word;
 	width: 175px;
 }
-.pcm-location .per-city .city-content .city-info .cityname {
+#content .per-city .city-content .city-info .cityname {
 	font-size: 15px;
 	font-weight: 700;
-}
-
-
-/* =================================================
- * HOVERINFO
- =================================================== */
-
-.pcm-location .hover-body {
-	padding: 0 20px;
-}
-
-
-/* =================================================
- * MODAL
- =================================================== */
-
-.pcm-location .modal-dialog {
-	width: 582px;
-}
-.pcm-location .modal-dialog .modal-content {
-	border-radius: 0;
-}
-.pcm-location .hoverinfo .hover-header,
-.modal-dialog .modal-content .modal-header {
-	background-color: #D12233;
-	padding: 15px;
-}
-.pcm-location .modal-dialog .modal-content .modal-header .close {
-	border: 1px solid #FFFFFF;
-	color: #FFFFFF;
-	font-size: 13px;
-	font-weight: 400;
-	margin: 0;
-	opacity: 1;
-	padding: 2px 8px 6px;
-}
-.pcm-location .modal-dialog .modal-content .modal-header .close:hover {
-	color: #FFFFFF;
-	opacity: 0.8;
-}
-.pcm-location .modal-dialog .modal-content .modal-body {
-	padding: 0 20px;
 }
 
 
@@ -164,7 +167,7 @@
  * LEGEND
  =================================================== */
 
-.pcm-location .legend-title {
+#content .legend-title {
 	background-color: #FFFFFF;
 	float: left;
 	font-size: 18px;
@@ -173,20 +176,20 @@
 	position: absolute;
 	z-index: 10;
 }
-.pcm-location .legend-title i {
+#content .legend-title i {
 	color: #ACACAC;
 	font-size: 12px;
 	margin-top: -4px;
 	vertical-align: middle;
 }
-.pcm-location .legends {
+#content .legends {
 	border: 1px solid #ACACAC;
 	border-radius: 5px;
 	margin: 37px 0 31px;
 	padding: 38px 20px 10px 52px;
 	position: relative;
 }
-.pcm-location .legends .legend {
+#content .legends .legend {
 	align-items: center;
 	display: inline-flex;
 	font-size: 11px;
@@ -196,17 +199,17 @@
 	vertical-align: middle;
 	width: 19%;
 }
-.pcm-location .legends .legend img,
-.pcm-location .legends .legend p {
+#content .legends .legend img,
+#content .legends .legend p {
 	display: inline-block;
 }
-.pcm-location .legends .legend img {
+#content .legends .legend img {
 	width: 25px;
 }
-.pcm-location .legends .legend p {
+#content .legends .legend p {
 	margin: 0 0 0 10px;
 }
-.pcm-location .legends .legend:last-child {
+#content .legends .legend:last-child {
 	width: 27%;
 }
 
@@ -215,37 +218,37 @@
  * STATE LIST
  =================================================== */
 
-.pcm-location .states {
+#content .states {
 	padding: 0 10%;
 }
-.pcm-location .states ul {
+#content .states ul {
 	list-style: none;
 	padding: 0 !important;
 	-moz-column-count: 3;
 	-webkit-column-count: 3;
 	column-count: 3;
 }
-.pcm-location .states ul li {
+#content .states ul li {
 	font-size: 14px;
 	margin: 0 0 15px;
 	position: relative;
 }
-.pcm-location .states ul li i {
+#content .states ul li i {
 	color: #5093b9;
 	padding: 5px 0 0;
 	position: absolute;
 	z-index: 3;
 }
-.pcm-location .states ul li .state {
+#content .states ul li .state {
 	cursor: pointer;
 	margin: 0 0 0 20px;
 	position: relative;
 	overflow: hidden;
 }
-.pcm-location .states ul li .state:hover {
+#content .states ul li .state:hover {
 	color: #000000;
 }
-.pcm-location .states ul li .state::after {
+#content .states ul li .state::after {
 	background: #FFFFFF;
 	content: '';
 	height: 16px;
@@ -258,10 +261,10 @@
 	top: 50%;
 	width: 100%;
 }
-.pcm-location .states ul li .state:hover::after {
+#content .states ul li .state:hover::after {
 	transform: translate3d(100%,0,0);
 }
-.pcm-location .states ul li .state::before {
+#content .states ul li .state::before {
 	content: attr(data-letters);
 	position: absolute;
 	z-index: 2;
@@ -271,7 +274,7 @@
 	width: 0%;
 	transition: width 0.4s 0.3s;
 }
-.pcm-location .states ul li .state:hover::before {
+#content .states ul li .state:hover::before {
 	width: 100%;
 }
 
@@ -282,53 +285,53 @@
 
 /* For pcmph */
 @media only screen and (max-width: 1133px) {
-	.pcm-location .map {
+	#content .map {
 		display: none;
 	}
 }
 /* Default */
 @media only screen and (max-width: 1024px) {
-	.pcm-location .legends .legend {
+	#content .legends .legend {
 		width: 24%;
 	}
-	.pcm-location .legends .legend:last-child {
+	#content .legends .legend:last-child {
 		width: 36%;
 	}
 }
 @media only screen and (max-width: 860px) {
-	.pcm-location .states ul {
+	#content .states ul {
 		-moz-column-count: 2;
 		-webkit-column-count: 2;
 		column-count: 2;
 	}
 }
 @media only screen and (max-width: 800px) {
-	.pcm-location .legends .legend,
-	.pcm-location .legends .legend:last-child {
+	#content .legends .legend,
+	#content .legends .legend:last-child {
 		width: 32%;
 	}
 }
 @media only screen and (max-width: 695px) {
-	.pcm-location .legends .legend {
+	#content .legends .legend {
 		width: 49%;
 	}
-	.pcm-location .legends .legend:last-child {
+	#content .legends .legend:last-child {
 		width: 100%;
 	}
 }
 @media only screen and (max-width: 510px) {
-	.pcm-location .states {
+	#content .states {
 		padding: 0 32px;
 	}
 }
 @media only screen and (max-width: 480px) {
-	.pcm-location .legends .legend {
+	#content .legends .legend {
 		width: 100%;
 	}
-	.pcm-location .states {
+	#content .states {
 		padding: 0 45px;
 	}
-	.pcm-location .states ul {
+	#content .states ul {
 		-moz-column-count: 1;
 		-webkit-column-count: 1;
 		column-count: 1;

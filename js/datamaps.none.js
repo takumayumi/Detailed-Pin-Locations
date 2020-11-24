@@ -366,81 +366,21 @@
     }, m.prototype.updatePopup = function(a, b, c) {
         var d = this;
         a.on("mousemove", null), a.on("mousemove", function() {
-            var e = n.mouse(d.options.element);
-            var str = JSON.stringify(b);
-
-
-            /*
-             * No info.
-             */
-            if ((str.match('AK')) || (str.match('AL')) || (str.match('AR')) || (str.match('AZ')) || (str.match('CO')) || (str.match('DC')) || (str.match('DE')) || (str.match('IA')) || (str.match('KS')) || (str.match('LA')) || (str.match('MD')) || (str.match('ME')) || (str.match('MI')) || (str.match('MN')) || (str.match('MS')) || (str.match('MT')) || (str.match('ND')) || (str.match('NE')) || (str.match('NH')) || (str.match('NV')) || (str.match('NY')) || (str.match('OK')) || (str.match('RI')) || (str.match('TN')) || (str.match('VT')) || (str.match('WV')) || (str.match('WY'))) {
-                n.select(d.svg[0][0].parentNode).select(".datamaps-hoverover").style("top", e[1] - 230 + "px").html(function() {
-                    var d = JSON.parse(a.attr("data-info"));
-                    try {
-                        return c.popupTemplate(b, d)
-                    } catch (e) {
-                        return ""
-                    }
-                }).style("left", e[0] - 148 + "px")
-            }
-
-            /*
-             * States with one city.
-             */
-            else if ((str.match("CT")) || (str.match("IN")) || (str.match("KY")) || (str.match("MO")) || (str.match("NC")) || (str.match("NM")) || (str.match("OR")) || (str.match("PA")) || (str.match("SD")) || (str.match("UT")) || (str.match("VA")) || (str.match("WA")) || (str.match("WI")) || (str.match("CA.BC")) || (str.match("CA.MB")) || (str.match("CA.ON")) || (str.match("CA.QC"))) {
-                n.select(d.svg[0][0].parentNode).select(".datamaps-hoverover").style("top", e[1] - 230 + "px").html(function() {
-                    var d = JSON.parse(a.attr("data-info"));
-                    try {
-                        return c.popupTemplate(b, d)
-                    } catch (e) {
-                        return ""
-                    }
-                }).style("left", e[0] - 148 + "px")
-            }
-
-
-            /*
-             * States with two cities.
-             */
-            else if ((str.match("FL")) || (str.match("GA")) || (str.match("ID")) || (str.match("IL")) || (str.match("MA")) || (str.match("NJ")) || (str.match("TX")) || (str.match("CA.AB"))) {
-                n.select(d.svg[0][0].parentNode).select(".datamaps-hoverover").style("top", e[1] - 230 + "px").html(function() {
-                    var d = JSON.parse(a.attr("data-info"));
-                    try {
-                        return c.popupTemplate(b, d)
-                    } catch (e) {
-                        return ""
-                    }
-                }).style("left", e[0] - 291 + "px")
-            }
-
-            /*
-             * States with three cities and four cities.
-             */
-            else if ((str.match("CA"))) {
-                n.select(d.svg[0][0].parentNode).select(".datamaps-hoverover").style("top", e[1] - 360 + "px").html(function() {
-                    var d = JSON.parse(a.attr("data-info"));
-                    try {
-                        return c.popupTemplate(b, d)
-                    } catch (e) {
-                        return ""
-                    }
-                }).style("left", e[0] - 291 + "px")
-            }
-
-            /*
-             * States with seven cities.
-             */
-            else if ((str.match("OH"))) {
-                n.select(d.svg[0][0].parentNode).select(".datamaps-hoverover").style("top", e[1] - 620 + "px").html(function() {
-                    var d = JSON.parse(a.attr("data-info"));
-                    try {
-                        return c.popupTemplate(b, d)
-                    } catch (e) {
-                        return ""
-                    }
-                }).style("left", e[0] - 291 + "px")
-            }
+            var e = n.mouse(d.options.element);            
+            var small = ["AK", "AL", "AR", "AZ", "CO", "CT", "DC", "DE", "FL", "IA", "IN", "KS", "KY", 
+                        "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", 
+                        "NM", "NV", "NY", "OK", "OR", "PA", "RI", "SD", "TN", "TX", "UT", "VA", "VT", 
+                        "WA", "WI", "WV", "WY", "CA.BC", "CA.MB", "CA.ON", "CA.QC"];
             
+            
+            n.select(d.svg[0][0].parentNode).select(".datamaps-hoverover").style("top", e[1] - (b.id == "CA" ? 360 : (b.id == "OH" ? 500 : 230)) + "px").html(function() {
+                var d = JSON.parse(a.attr("data-info"));
+                try {
+                    return c.popupTemplate(b, d)
+                } catch (e) {
+                    return ""
+                }
+            }).style("left", e[0] - (small.includes(b.id) ? 148 : 291) + "px");            
         }), n.select(d.svg[0][0].parentNode).select(".datamaps-hoverover").style("display", "block")
     }, m.prototype.addPlugin = function(a, b) {
         var c = this;
