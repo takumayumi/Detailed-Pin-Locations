@@ -200,6 +200,9 @@
 .pcm-location .legends .legend p {
 	display: inline-block;
 }
+.pcm-location .legends .legend img {
+	width: 25px;
+}
 .pcm-location .legends .legend p {
 	margin: 0 0 0 10px;
 }

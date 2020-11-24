@@ -1,10 +1,11 @@
 var PCM = PCM || {};
 
 PCM.locationMap = (function(jQuery) {
-	var canadaJson = 'https://raw.githubusercontent.com/takumayumirin/detailed-pin-locations/main/json/canada.data.json',
-		usaJson = 'https://raw.githubusercontent.com/takumayumirin/detailed-pin-locations/main/json/usa.data.json',
-		canadaTopoJson = 'https://raw.githubusercontent.com/takumayumirin/detailed-pin-locations/main/json/canada.topo.json',
-		usaTopoJson = 'https://raw.githubusercontent.com/takumayumirin/detailed-pin-locations/main/json/usa.topo.json',
+	var github = 'https://raw.githubusercontent.com/takumayumirin/detailed-pin-locations/main/',
+		canadaData = github + 'json/canada.data.json',
+		usaData = github + 'json/usa.data.json',
+		canadaTopoJson = github + 'json/canada.topo.json',
+		usaTopoJson = github + 'json/usa.topo.json',
 		ua = window.navigator.userAgent,
 		msie = ua.indexOf('MSIE'),
 		firefox = ua.indexOf('Firefox');
@@ -27,7 +28,7 @@ PCM.locationMap = (function(jQuery) {
 							'<div class="hover-body">' +
 								'<div class="per-city" style="border: none;">' +
 									'<div class="city-content">' +
-										'<img class="pull-left city-img" src="../img/' + data.city[0].legend + '">' +
+										'<img class="pull-left city-img" src="' + github + 'img/' + data.city[0].legend + '">' +
 										'<div class="city-info">' +
 											'<p class="cityname">' + data.city[0].cityname + '</p>' +
 											'<p class="address">' + data.city[0].address.replace('\n','<br/>') + '</p>' +
@@ -46,7 +47,7 @@ PCM.locationMap = (function(jQuery) {
 							'<div class="hover-body">' +
 								'<div class="per-city" style="border: none;">' +
 									'<div class="city-content">' +
-										'<img class="pull-left city-img" src="../img/' + data.city[0].legend + '">' +
+										'<img class="pull-left city-img" src="'+ github + '/img/' + data.city[0].legend + '">' +
 										'<div class="city-info">' +
 											'<p class="cityname">' + data.city[0].cityname + '</p>' +
 											'<p class="address">' + data.city[0].address.replace('\n','<br/>') + '</p>' +
@@ -57,7 +58,7 @@ PCM.locationMap = (function(jQuery) {
 								'</div>' +
 								'<div class="per-city" style="border: none;">' +
 									'<div class="city-content">' +
-										'<img class="pull-left city-img" src="../img/' + data.city[1].legend + '">' +
+										'<img class="pull-left city-img" src="'+ github + '/img/' + data.city[1].legend + '">' +
 										'<div class="city-info">' +
 											'<p class="cityname">' + data.city[1].cityname + '</p>' +
 											'<p class="address">' + data.city[1].address.replace('\n','<br/>') + '</p>' +
@@ -73,9 +74,9 @@ PCM.locationMap = (function(jQuery) {
 					}
 				}
 			},
-			dataUrl: canadaData,
+			dataUrl: usaData,
 			dataType: 'json',
-			data: {},
+			data: canadaData,
 			scope: 'canada',
 			fills: {
 				defaultFill: '#F0EFEF',
@@ -134,7 +135,7 @@ PCM.locationMap = (function(jQuery) {
 							'<div class="hover-body">' +
 								'<div class="per-city" style="border: none;">' +
 									'<div class="city-content">' +
-										'<img class="pull-left city-img" src="../img/' + data.city[0].legend + '">' +
+										'<img class="pull-left city-img" src="'+ github + '/img/' + data.city[0].legend + '">' +
 										'<div class="city-info">' +
 											'<p class="cityname">' + data.city[0].cityname + '</p>' +
 											'<p class="address">' + data.city[0].address.replace('\n','<br/>') + '</p>' +
@@ -153,7 +154,7 @@ PCM.locationMap = (function(jQuery) {
 							'<div class="hover-body">' +
 								'<div class="per-city" style="border: none;">' +
 									'<div class="city-content">' +
-										'<img class="pull-left city-img" src="../img/' + data.city[0].legend + '">' +
+										'<img class="pull-left city-img" src="'+ github + '/img/' + data.city[0].legend + '">' +
 										'<div class="city-info">' +
 											'<p class="cityname">' + data.city[0].cityname + '</p>' +
 											'<p class="address">' + data.city[0].address.replace('\n','<br/>') + '</p>' +
@@ -164,7 +165,7 @@ PCM.locationMap = (function(jQuery) {
 								'</div>' +
 								'<div class="per-city" style="border: none;">' +
 									'<div class="city-content">' +
-										'<img class="pull-left city-img" src="../img/' + data.city[1].legend + '">' +
+										'<img class="pull-left city-img" src="'+ github + '/img/' + data.city[1].legend + '">' +
 										'<div class="city-info">' +
 											'<p class="cityname">' + data.city[1].cityname + '</p>' +
 											'<p class="address">' + data.city[1].address.replace('\n','<br/>') + '</p>' +
@@ -183,7 +184,7 @@ PCM.locationMap = (function(jQuery) {
 							'<div class="hover-body">' +
 								'<div class="per-city">' +
 									'<div class="city-content">' +
-										'<img class="pull-left city-img" src="../img/' + data.city[0].legend + '">' +
+										'<img class="pull-left city-img" src="'+ github + '/img/' + data.city[0].legend + '">' +
 										'<div class="city-info">' +
 											'<p class="cityname">' + data.city[0].cityname + '</p>' +
 											'<p class="address">' + data.city[0].address.replace('\n','<br/>') + '</p>' +
@@ -194,7 +195,7 @@ PCM.locationMap = (function(jQuery) {
 								'</div>' +
 								'<div class="per-city">' +
 									'<div class="city-content">' +
-										'<img class="pull-left city-img" src="../img/' + data.city[1].legend + '">' +
+										'<img class="pull-left city-img" src="'+ github + '/img/' + data.city[1].legend + '">' +
 										'<div class="city-info">' +
 											'<p class="cityname">' + data.city[1].cityname + '</p>' +
 											'<p class="address">' + data.city[1].address.replace('\n','<br/>') + '</p>' +
@@ -205,7 +206,7 @@ PCM.locationMap = (function(jQuery) {
 								'</div>' +
 								'<div class="per-city" style="border: none; margin: 0 0 0 156px;">' +
 									'<div class="city-content">' +
-										'<img class="pull-left city-img" src="../img/' + data.city[2].legend + '">' +
+										'<img class="pull-left city-img" src="'+ github + '/img/' + data.city[2].legend + '">' +
 										'<div class="city-info">' +
 											'<p class="cityname">' + data.city[2].cityname + '</p>' +
 											'<p class="address">' + data.city[2].address.replace('\n','<br/>') + '</p>' +
@@ -224,7 +225,7 @@ PCM.locationMap = (function(jQuery) {
 							'<div class="hover-body">' +
 								'<div class="per-city">' +
 									'<div class="city-content">' +
-										'<img class="pull-left city-img" src="../img/' + data.city[0].legend + '">' +
+										'<img class="pull-left city-img" src="'+ github + '/img/' + data.city[0].legend + '">' +
 										'<div class="city-info">' +
 											'<p class="cityname">' + data.city[0].cityname + '</p>' +
 											'<p class="address">' + data.city[0].address.replace('\n','<br/>') + '</p>' +
@@ -235,7 +236,7 @@ PCM.locationMap = (function(jQuery) {
 								'</div>' +
 								'<div class="per-city">' +
 									'<div class="city-content">' +
-										'<img class="pull-left city-img" src="../img/' + data.city[1].legend + '">' +
+										'<img class="pull-left city-img" src="'+ github + '/img/' + data.city[1].legend + '">' +
 										'<div class="city-info">' +
 											'<p class="cityname">' + data.city[1].cityname + '</p>' +
 											'<p class="address">' + data.city[1].address.replace('\n','<br/>') + '</p>' +
@@ -246,7 +247,7 @@ PCM.locationMap = (function(jQuery) {
 								'</div>' +
 								'<div class="per-city" style="border: none;">' +
 									'<div class="city-content">' +
-										'<img class="pull-left city-img" src="../img/' + data.city[2].legend + '">' +
+										'<img class="pull-left city-img" src="'+ github + '/img/' + data.city[2].legend + '">' +
 										'<div class="city-info">' +
 											'<p class="cityname">' + data.city[2].cityname + '</p>' +
 											'<p class="address">' + data.city[2].address.replace('\n','<br/>') + '</p>' +
@@ -257,7 +258,7 @@ PCM.locationMap = (function(jQuery) {
 								'</div>' +
 								'<div class="per-city" style="border: none;">' +
 									'<div class="city-content">' +
-										'<img class="pull-left city-img" src="../img/' + data.city[3].legend + '">' +
+										'<img class="pull-left city-img" src="'+ github + '/img/' + data.city[3].legend + '">' +
 										'<div class="city-info">' +
 											'<p class="cityname">' + data.city[3].cityname + '</p>' +
 											'<p class="address">' + data.city[3].address.replace('\n','<br/>') + '</p>' +
@@ -276,7 +277,7 @@ PCM.locationMap = (function(jQuery) {
 							'<div class="hover-body">' +
 								'<div class="per-city">' +
 									'<div class="city-content">' +
-										'<img class="pull-left city-img" src="../img/' + data.city[0].legend + '">' +
+										'<img class="pull-left city-img" src="'+ github + '/img/' + data.city[0].legend + '">' +
 										'<div class="city-info">' +
 											'<p class="cityname">' + data.city[0].cityname + '</p>' +
 											'<p class="address">' + data.city[0].address.replace('\n','<br/>') + '</p>' +
@@ -287,7 +288,7 @@ PCM.locationMap = (function(jQuery) {
 								'</div>' +
 								'<div class="per-city">' +
 									'<div class="city-content">' +
-										'<img class="pull-left city-img" src="../img/' + data.city[1].legend + '">' +
+										'<img class="pull-left city-img" src="'+ github + '/img/' + data.city[1].legend + '">' +
 										'<div class="city-info">' +
 											'<p class="cityname">' + data.city[1].cityname + '</p>' +
 											'<p class="address">' + data.city[1].address.replace('\n','<br/>') + '</p>' +
@@ -298,7 +299,7 @@ PCM.locationMap = (function(jQuery) {
 								'</div>' +
 								'<div class="per-city">' +
 									'<div class="city-content">' +
-										'<img class="pull-left city-img" src="../img/' + data.city[2].legend + '">' +
+										'<img class="pull-left city-img" src="'+ github + '/img/' + data.city[2].legend + '">' +
 										'<div class="city-info">' +
 											'<p class="cityname">' + data.city[2].cityname + '</p>' +
 											'<p class="address">' + data.city[2].address.replace('\n','<br/>') + '</p>' +
@@ -309,7 +310,7 @@ PCM.locationMap = (function(jQuery) {
 								'</div>' +
 								'<div class="per-city">' +
 									'<div class="city-content">' +
-										'<img class="pull-left city-img" src="../img/' + data.city[3].legend + '">' +
+										'<img class="pull-left city-img" src="'+ github + '/img/' + data.city[3].legend + '">' +
 										'<div class="city-info">' +
 											'<p class="cityname">' + data.city[3].cityname + '</p>' +
 											'<p class="address">' + data.city[3].address.replace('\n','<br/>') + '</p>' +
@@ -320,7 +321,7 @@ PCM.locationMap = (function(jQuery) {
 								'</div>' +
 								'<div class="per-city">' +
 									'<div class="city-content">' +
-										'<img class="pull-left city-img" src="../img/' + data.city[4].legend + '">' +
+										'<img class="pull-left city-img" src="'+ github + '/img/' + data.city[4].legend + '">' +
 										'<div class="city-info">' +
 											'<p class="cityname">' + data.city[4].cityname + '</p>' +
 											'<p class="address">' + data.city[4].address.replace('\n','<br/>') + '</p>' +
@@ -331,7 +332,7 @@ PCM.locationMap = (function(jQuery) {
 								'</div>' +
 								'<div class="per-city">' +
 									'<div class="city-content">' +
-										'<img class="pull-left city-img" src="../img/' + data.city[5].legend + '">' +
+										'<img class="pull-left city-img" src="'+ github + '/img/' + data.city[5].legend + '">' +
 										'<div class="city-info">' +
 											'<p class="cityname">' + data.city[5].cityname + '</p>' +
 											'<p class="address">' + data.city[5].address.replace('\n','<br/>') + '</p>' +
@@ -342,7 +343,7 @@ PCM.locationMap = (function(jQuery) {
 								'</div>' +
 								'<div class="per-city" style="border: none; left: 50%; margin: 0 auto; transform: translate(-50%, 0)">' +
 									'<div class="city-content">' +
-										'<img class="pull-left city-img" src="../img/' + data.city[6].legend + '">' +
+										'<img class="pull-left city-img" src="'+ github + '/img/' + data.city[6].legend + '">' +
 										'<div class="city-info">' +
 											'<p class="cityname">' + data.city[6].cityname + '</p>' +
 											'<p class="address">' + data.city[6].address.replace('\n','<br/>') + '</p>' +
@@ -356,7 +357,7 @@ PCM.locationMap = (function(jQuery) {
 					}
 				}
 			},
-			dataUrl: usaJson,
+			dataUrl: usaData,
 			dataType: 'json',
 			data: {},
 			scope: 'usa',
@@ -443,7 +444,7 @@ PCM.locationMap = (function(jQuery) {
 			modalBody.empty();
 
 			jQuery.ajax({
-				url: json,
+				url: usaData,
 				dataType: 'json',
 				success: function(data) {
 					var findCode = data[stateCode];
@@ -454,7 +455,7 @@ PCM.locationMap = (function(jQuery) {
 					jQuery.each(findCode.city, function() {
 						modalBody.append('<div class="per-city">' +
 							'<div class="city-content">' +
-								'<img class="pull-left city-img" src="../img/' + this.legend + '">' +
+								'<img class="pull-left city-img" src="'+ github + '/img/' + this.legend + '">' +
 								'<div class="city-info">' +
 									'<p class="cityname">' + this.cityname + '</p>' +
 									'<p class="address">' + this.address.replace('\n','<br/>') + '</p>' +
