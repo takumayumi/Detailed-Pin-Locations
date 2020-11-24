@@ -1,0 +1,69 @@
+{
+    "CA.AB": {
+        "name": "Alberta",
+        "city": [
+            {
+                "cityname": "Calgary",
+                "legend": "default.png",
+                "address": "42 Street SE",
+                "code": "T2C 5C7",
+                "phone": "Tel. #: 000-000-0000"
+            },
+            {
+                "cityname": "Edmonton",
+                "legend": "default.png",
+                "address": "170 Street NW",
+                "code": "T5S 1L7",
+                "phone": "Tel. #: 000-000-0000"
+            }
+        ]
+    },
+    "CA.BC": {
+        "name": "British Columbia",
+        "city": [
+            {
+                "cityname": "Vancouver",
+                "legend": "default.png",
+                "address": "Burrard Street",
+                "code": "V6C 3P6",
+                "phone": "Tel. #: 000-000-0000"
+            }
+        ]
+    },
+    "CA.MB": {
+        "name": "Manitoba",
+        "city": [
+            {
+                "cityname": "Winnipeg",
+                "legend": "default.png",
+                "address": "Albert Street",
+                "code": "R3B 1E9",
+                "phone": "Tel. #: 000-000-0000"
+            }
+        ]
+    },
+    "CA.ON": {
+        "name": "Ontario",
+        "city": [
+            {
+                "cityname": "Markham",
+                "legend": "default.png",
+                "address": "Rodick Road",
+                "code": "L3R 8C3",
+                "phone": "Tel. #: 000-000-0000"
+            }
+        ]
+    },
+    "CA.QC": {
+        "name": "Quebec",
+        "city": [
+            {
+                "cityname": "Montreal",
+                "legend": "default.png",
+                "address": "Robert-Bourassa Blvd",
+                "code": "H3B3A5",
+                "phone": ""
+            }
+        ]
+    }
+}

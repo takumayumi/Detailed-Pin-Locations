@@ -1,0 +1,333 @@
+/* =================================================
+ * BOOTSTRAP / SVG DATAMAPS
+ =================================================== */
+
+.pcm-location {
+	border-radius: 6px;
+	color: #000000;
+	font-family: 'Open Sans', sans-serif;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.pcm-location * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.pcm-location h4 {
+	font-weight: 700;
+	color: #FFFFFF;
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+.pcm-location p {
+	line-height: 1.4em;
+	margin: 0;
+	padding: 0;
+}
+.pcm-location path {
+	fill: rgb(240, 239, 239);
+}
+.pcm-location circle {
+	pointer-events: none;
+}
+
+
+/* =================================================
+ * LOCATION MAP
+ =================================================== */
+
+.pcm-location .map-labels {
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	width: 829px;
+}
+.pcm-location .map-labels label {
+	font-size: 10px;
+	font-weight: 700;
+	pointer-events: none;
+	position: absolute;
+	z-index: 14;
+}
+.pcm-location .map {
+	background-color: #006298;
+	border-radius: 6px;
+	height: 500px;
+}
+.pcm-location .map .canada {
+	z-index: 10;
+}
+.pcm-location .map .usa {
+	/*margin: -137px 0 0 146px;*/
+	pointer-events: none;
+	/*position: absolute;*/
+}
+.pcm-location .map .canada #canada-map {
+	display: block;
+	margin: 0 auto;
+}
+.pcm-location .map .usa #usa-map {
+	display: block;
+	margin: -137px auto 0;
+	/*padding: 0 0 0 11px;*/
+}
+.pcm-location .map .usa #usa-map path {
+	pointer-events: auto;
+}
+
+
+/* =================================================
+ * MODAL AND HOVERINFO
+ =================================================== */
+
+.pcm-location .per-city {
+	display: inline-block;
+	clear: both;
+	border-bottom: 1px solid #B7B7B7;
+	font-size: 12px;
+	height: 131px;
+	padding: 18px 0 30px;
+	position: relative;
+	vertical-align: middle;
+	width: 270px;
+}
+.pcm-location .per-city:nth-child(even) .city-content {
+	margin: 0 0 0 20px;
+}
+.pcm-location .per-city .city-content .city-img,
+.pcm-location .per-city .city-info {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+.pcm-location .per-city .city-content .city-info {
+	display: inline-block;
+	margin: 0 0 0 75px;
+	padding: 0 0 0 20px;
+	word-wrap: break-word;
+	width: 175px;
+}
+.pcm-location .per-city .city-content .city-info .cityname {
+	font-size: 15px;
+	font-weight: 700;
+}
+
+
+/* =================================================
+ * HOVERINFO
+ =================================================== */
+
+.pcm-location .hover-body {
+	padding: 0 20px;
+}
+
+
+/* =================================================
+ * MODAL
+ =================================================== */
+
+.pcm-location .modal-dialog {
+	width: 582px;
+}
+.pcm-location .modal-dialog .modal-content {
+	border-radius: 0;
+}
+.pcm-location .hoverinfo .hover-header,
+.modal-dialog .modal-content .modal-header {
+	background-color: #D12233;
+	padding: 15px;
+}
+.pcm-location .modal-dialog .modal-content .modal-header .close {
+	border: 1px solid #FFFFFF;
+	color: #FFFFFF;
+	font-size: 13px;
+	font-weight: 400;
+	margin: 0;
+	opacity: 1;
+	padding: 2px 8px 6px;
+}
+.pcm-location .modal-dialog .modal-content .modal-header .close:hover {
+	color: #FFFFFF;
+	opacity: 0.8;
+}
+.pcm-location .modal-dialog .modal-content .modal-body {
+	padding: 0 20px;
+}
+
+
+/* =================================================
+ * LEGEND
+ =================================================== */
+
+.pcm-location .legend-title {
+	background-color: #FFFFFF;
+	float: left;
+	font-size: 18px;
+	font-weight: 700;
+	margin: 26px 0 0 52px;
+	position: absolute;
+	z-index: 10;
+}
+.pcm-location .legend-title i {
+	color: #ACACAC;
+	font-size: 12px;
+	margin-top: -4px;
+	vertical-align: middle;
+}
+.pcm-location .legends {
+	border: 1px solid #ACACAC;
+	border-radius: 5px;
+	margin: 37px 0 31px;
+	padding: 38px 20px 10px 52px;
+	position: relative;
+}
+.pcm-location .legends .legend {
+	align-items: center;
+	display: inline-flex;
+	font-size: 11px;
+	margin: 0 0 22px 0;
+	padding: 0 20px 0 0;
+	position: relative;
+	vertical-align: middle;
+	width: 19%;
+}
+.pcm-location .legends .legend img,
+.pcm-location .legends .legend p {
+	display: inline-block;
+}
+.pcm-location .legends .legend p {
+	margin: 0 0 0 10px;
+}
+.pcm-location .legends .legend:last-child {
+	width: 27%;
+}
+
+
+ /* ================================================
+ * STATE LIST
+ =================================================== */
+
+.pcm-location .states {
+	padding: 0 10%;
+}
+.pcm-location .states ul {
+	list-style: none;
+	padding: 0 !important;
+	-moz-column-count: 3;
+	-webkit-column-count: 3;
+	column-count: 3;
+}
+.pcm-location .states ul li {
+	font-size: 14px;
+	margin: 0 0 15px;
+	position: relative;
+}
+.pcm-location .states ul li i {
+	color: #5093b9;
+	padding: 5px 0 0;
+	position: absolute;
+	z-index: 3;
+}
+.pcm-location .states ul li .state {
+	cursor: pointer;
+	margin: 0 0 0 20px;
+	position: relative;
+	overflow: hidden;
+}
+.pcm-location .states ul li .state:hover {
+	color: #000000;
+}
+.pcm-location .states ul li .state::after {
+	background: #FFFFFF;
+	content: '';
+	height: 16px;
+	margin-top: -8px;
+	position: absolute;
+	right: 0;
+	transform: translate3d(-100%,0,0);
+	transition: transform 0.4s;
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	top: 50%;
+	width: 100%;
+}
+.pcm-location .states ul li .state:hover::after {
+	transform: translate3d(100%,0,0);
+}
+.pcm-location .states ul li .state::before {
+	content: attr(data-letters);
+	position: absolute;
+	z-index: 2;
+	overflow: hidden;
+	color: #5093b9;
+	white-space: nowrap;
+	width: 0%;
+	transition: width 0.4s 0.3s;
+}
+.pcm-location .states ul li .state:hover::before {
+	width: 100%;
+}
+
+
+/* ================================================
+ * RESPONSIVENESS
+ =================================================== */
+
+/* For pcmph */
+@media only screen and (max-width: 1133px) {
+	.pcm-location .map {
+		display: none;
+	}
+}
+/* Default */
+@media only screen and (max-width: 1024px) {
+	.pcm-location .legends .legend {
+		width: 24%;
+	}
+	.pcm-location .legends .legend:last-child {
+		width: 36%;
+	}
+}
+@media only screen and (max-width: 860px) {
+	.pcm-location .states ul {
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+}
+@media only screen and (max-width: 800px) {
+	.pcm-location .legends .legend,
+	.pcm-location .legends .legend:last-child {
+		width: 32%;
+	}
+}
+@media only screen and (max-width: 695px) {
+	.pcm-location .legends .legend {
+		width: 49%;
+	}
+	.pcm-location .legends .legend:last-child {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 510px) {
+	.pcm-location .states {
+		padding: 0 32px;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.pcm-location .legends .legend {
+		width: 100%;
+	}
+	.pcm-location .states {
+		padding: 0 45px;
+	}
+	.pcm-location .states ul {
+		-moz-column-count: 1;
+		-webkit-column-count: 1;
+		column-count: 1;
+	}
+}

@@ -1,0 +1,447 @@
+{
+	"AK" : {},
+	"AL" : {},
+	"AR" : {},
+	"AZ" : {},
+	"CA": {
+	    "name": "California",
+	    "city": [
+			{
+				"cityname": "El Segundo",
+				"legend": "default.png",
+				"address": "E. Mariposa Ave",
+				"code": "90245",
+				"phone": "Tel. #: 000-000-0000"
+			},
+			{
+				"cityname": "Irvine",
+				"legend": "default.png",
+				"address": "Morgan",
+				"code": "92618",
+				"phone": "Tel. #: 0-000-000-0000"
+			},
+			{
+				"cityname": "San Diego",
+				"legend": "default.png",
+				"address": "Murphy Canyon Road",
+				"code": "92123",
+				"phone": ""
+			},
+			{
+				"cityname": "San Francisco",
+				"legend": "default.png",
+				"address": "One California Street",
+				"code": "94111",
+				"phone": ""
+			}
+	    ]
+	},
+	"CA.AB": {
+	    "name": "Alberta",
+	    "city": [
+			{
+				"cityname": "Calgary",
+				"legend": "default.png",
+				"address": "42 Street SE",
+				"code": "T2C 5C7",
+				"phone": "Tel. #: 000-000-0000"
+			},
+			{
+				"cityname": "Edmonton",
+				"legend": "default.png",
+				"address": "170 Street NW",
+				"code": "T5S 1L7",
+				"phone": "Tel. #: 000-000-0000"
+			}
+	    ]
+	},
+	"CA.BC": {
+	    "name": "British Columbia",
+	    "city": [
+			{
+				"cityname": "Vancouver",
+				"legend": "default.png",
+				"address": "Burrard Street",
+				"code": "V6C 3P6",
+				"phone": "Tel. #: 000-000-0000"
+			}
+	    ]
+	},
+	"CA.MB": {
+	    "name": "Manitoba",
+	    "city": [
+			{
+				"cityname": "Winnipeg",
+				"legend": "default.png",
+				"address": "Albert Street",
+				"code": "R3B 1E9",
+				"phone": "Tel. #: 000-000-0000"
+			}
+	    ]
+	},
+	"CA.ON": {
+	    "name": "Ontario",
+	    "city": [
+			{
+				"cityname": "Markham",
+				"legend": "default.png",
+				"address": "Rodick Road",
+				"code": "L3R 8C3",
+				"phone": "Tel. #: 000-000-0000"
+			}
+	    ]
+	},
+	"CA.QC": {
+	    "name": "Quebec",
+	    "city": [
+			{
+				"cityname": "Montreal",
+				"legend": "default.png",
+				"address": "Robert-Bourassa Blvd",
+				"code": "H3B3A5",
+				"phone": ""
+			}
+	    ]
+	},
+	"CA.SK" : {},
+	"CO" : {},
+	"CT": {
+	    "name": "Connecticut",
+	    "city": [
+			{
+				"cityname": "Shelton",
+				"legend": "default.png",
+				"address": "Trap Falls Road",
+				"code": "06484",
+				"phone": ""
+			}
+	    ]
+	},
+	"DC" : {},
+	"DE" : {},
+	"FL": {
+	    "name": "Florida",
+	    "city": [
+			{
+				"cityname": "Miami",
+				"legend": "default.png",
+				"address": "West Flagler Street",
+				"code": "33144",
+				"phone": ""
+			}
+	    ]
+	},
+	"GA": {
+	    "name": "Georgia",
+	    "city": [
+			{
+				"cityname": "Jefferson",
+				"legend": "default.png",
+				"address": "Hog Mountain Road",
+				"code": "30549",
+				"phone": ""
+			},
+			{
+				"cityname": "Roswell",
+				"legend": "default.png",
+				"address": "Old Ellis Pointe",
+				"code": "30076",
+				"phone": "Tel. #: 000-000-00000"
+			}
+	    ]
+	},
+	"IA" : {},
+	"ID": {
+	    "name": "Idaho",
+	    "city": [
+			{
+				"cityname": "Boise",
+				"legend": "default.png",
+				"address": "E. Summersweet Drive",
+				"code": "83716",
+				"phone": ""
+			},
+			{
+				"cityname": "Merida",
+				"legend": "default.png",
+				"address": "South Siverstone Way",
+				"code": "83642",
+				"phone": ""
+			}
+	    ]
+	},
+	"IL": {
+	    "name": "Illinois",
+	    "city": [
+			{
+				"cityname": "Chicago",
+				"legend": "default.png",
+				"address": "S. Riverside Plaza",
+				"code": "60606",
+				"phone": ""
+			},
+			{
+				"cityname": "Naperville",
+				"legend": "default.png",
+				"address": "Ambassador Drive",
+				"code": "60540",
+				"phone": ""
+			}
+	    ]
+	},
+	"IN": {
+	    "name": "Indiana",
+	    "city": [
+			{
+				"cityname": "Fishers",
+				"legend": "default.png",
+				"address": "Lantern Road",
+				"code": "46037",
+				"phone": "Tel. #: 0-000-000-0000"
+			}
+	    ]
+	},
+	"KS" : {},
+	"KY": {
+	    "name": "Kentucky",
+	    "city": [
+			{
+				"cityname": "Louisville",
+				"legend": "default.png",
+				"address": "River Road",
+				"code": "40206",
+				"phone": "Tel. #: 0-000-000-0000"
+			}
+	    ]
+	},
+	"LA" : {},
+	"MA": {
+	    "name": "Massachusetts",
+	    "city": [
+			{
+				"cityname": "Foxboro",
+				"legend": "default.png",
+				"address": "Foxborough Blvd",
+				"code": "02035",
+				"phone": ""
+			}
+	    ]
+	},
+	"MD" : {},
+	"ME" : {},
+	"MI" : {},
+	"MN" : {},
+	"MO": {
+	    "name": "Missouri",
+	    "city": [
+			{
+				"cityname": "St Louis",
+				"legend": "default.png",
+				"address": "City Place",
+				"code": "63141",
+				"phone": "Tel. #: 0-000-000-0000"
+			}
+	    ]
+	},
+	"MS" : {},
+	"MT" : {},
+	"NC": {
+	    "name": "North Carolina",
+	    "city": [
+			{
+				"cityname": "Raleigh",
+				"legend": "default.png",
+				"address": "Gresham Lake Road",
+				"code": "27610",
+				"phone": ""
+			}
+	    ]
+	},
+	"ND" : {},
+	"NE" : {},
+	"NH" : {},
+	"NJ": {
+	    "name": "New Jersey",
+	    "city": [
+			{
+				"cityname": "Brick",
+				"legend": "default.png",
+				"address": "Brick Blvd",
+				"code": "08723",
+				"phone": ""
+			},
+			{
+				"cityname": "Holmdel",
+				"legend": "default.png",
+				"address": "Hwy 35",
+				"code": "07733",
+				"phone": ""
+			}
+	    ]
+	},
+	"NM" : {
+	    "name": "New Mexico",
+	    "city": [
+			{
+				"cityname": "Rio Rancho",
+				"legend": "default.png",
+				"address": "HP Way NE",
+				"code": "87144",
+				"phone": ""
+			}
+	    ]
+	},
+	"NV" : {},
+	"NY" : {},
+	"OH": {
+	    "name": "Ohio",
+	    "city": [
+			{
+				"cityname": "Columbus",
+				"legend": "default.png",
+				"address": "Green Meadows",
+				"code": "43035",
+				"phone": "Tel. #: 0-000-000-0000"
+			},
+			{
+				"cityname": "Cincinnati",
+				"legend": "default.png",
+				"address": "McAuley Place",
+				"code": "45242",
+				"phone": ""
+			},
+			{
+				"cityname": "Cleveland",
+				"legend": "default.png",
+				"address": "Sweet Vally Drive",
+				"code": "44125",
+				"phone": ""
+			},
+			{
+				"cityname": "Dayton",
+				"legend": "default.png",
+				"address": "Poe Ave",
+				"code": "45414",
+				"phone": ""
+			},
+			{
+				"cityname": "Lewis Center",
+				"legend": "default.png",
+				"address": "A. Green Meadows Drive North",
+				"code": "43035",
+				"phone": ""
+			},
+			{
+				"cityname": "New Albany",
+				"legend": "default.png",
+				"address": "Souder Road",
+				"code": "43054",
+				"phone": ""
+			}
+	    ]
+	},
+	"OK" : {},
+	"OR": {
+	    "name": "Oregon",
+	    "city": [
+			{
+				"cityname": "Portland",
+				"legend": "default.png",
+				"address": "SW Greenburg Road",
+				"code": "97223",
+				"phone": ""
+			}
+	    ]
+	},
+	"PA": {
+	    "name": "Pennsylvania",
+	    "city": [
+			{
+				"cityname": "Pittsburgh",
+				"legend": "default.png",
+				"address": "Anderson Drive",
+				"code": "15220",
+				"phone": "Tel. #: 0-000-000-0000"
+			}
+	    ]
+	},
+	"RI" : {},
+	"SC" : {},
+	"SD": {
+	    "name": "South Dakota",
+	    "city": [
+			{
+				"cityname": "Sioux City",
+				"legend": "default.png",
+				"address": "North Derby Lane North",
+				"code": "57049",
+				"phone": ""
+			}
+	    ]
+	},
+	"TN" : {},
+	"TX": {
+	    "name": "Texas",
+	    "city": [
+			{
+				"cityname": "Austin",
+				"legend": "default.png",
+				"address": "Lakeline Blvd",
+				"code": "78717",
+				"phone": "Tel. #: 000-000-0000"
+			}
+	    ]
+	},
+	"US VI" : {},
+	"UT": {
+	    "name": "Utah",
+	    "city": [
+			{
+				"cityname": "Draper",
+				"legend": "default.png",
+				"address": "South Business Park Drive",
+				"code": "84020",
+				"phone": ""
+			}
+	    ]
+	},
+	"VA": {
+	    "name": "Virginia",
+	    "city": [
+			{
+				"cityname": "Chantilly",
+				"legend": "default.png",
+				"address": "Newbrook Drive",
+				"code": "20151",
+				"phone": "Tel. #: 0-000-000-0000"
+			}
+	    ]
+	},
+	"VT" : {},
+	"WA": {
+	    "name": "Washington",
+	    "city": [
+			{
+				"cityname": "Seattle",
+				"legend": "default.png",
+				"address": "NE 100th Street",
+				"code": "98125",
+				"phone": ""
+			}
+	    ]
+	},
+	"WI": {
+	    "name": "Wisconsin",
+	    "city": [
+			{
+				"cityname": "Milwaukee",
+				"legend": "default.png",
+				"address": "W. Park Place",
+				"code": "53224",
+				"phone": "Tel. #: 0-000-000-0000"
+			}
+	    ]
+	},
+	"WV" : {},
+	"WY" : {}
+}

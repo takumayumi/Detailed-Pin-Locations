@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PCM: Location Map</title>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+	<script src="js/datamaps.none.js"></script>
+	<script src="js/customized.bootstrap.min.js"></script>
+	<script src="js/locations.js"></script>
+	
+	<link rel="stylesheet" href="css/customized.bootstrap.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/locations.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+</head>
+<body style="height: 100%; margin: 0 auto; padding: 0 20px; width: 80%;">
+<div class="pcm-location">
+
+	<!-- SVG gradients and filters used by bubbles -->
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: inherit; width: 0; height: 0;">
+		<defs>
+			<!-- Alberta background image -->
+			<pattern id="ab" width="1" height="1">
+				<image width="39" height="40" xlink:href="img/default.png"/>
+			</pattern>
+			<!-- California (1) background image -->
+			<pattern id="ca_1" width="1" height="1">
+				<image width="44" height="56" xlink:href="img/default.png"/>
+			</pattern>
+			<!-- California (2) background image -->
+			<pattern id="ca_2" width="1" height="1">
+				<image width="63" height="62" xlink:href="img/default.png"/>
+			</pattern>
+			<!-- Georgia background image -->
+			<pattern id="ga" width="1" height="1">
+				<image width="76" height="71" xlink:href="img/default.png"/>
+			</pattern>
+			<!-- Ohio background image -->
+			<pattern id="oh" width="1" height="1">
+				<image width="71" height="49" xlink:href="img/default.png"/>
+			</pattern>
+			<!-- Virginia background image -->
+			<pattern id="va" width="1" height="1">
+				<image width="64" height="44" xlink:href="img/default.png"/>
+			</pattern>
+		</defs>
+	</svg>
+
+	<!-- MODAL -->
+	<div class="modal fade myModal" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal Content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close" data-dismiss="modal">x</span>
+					<h4></h4>
+				</div>
+				<div class="modal-body"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- MAP -->
+	<div class="map">
+		<!-- CHEATY LABELS -->
+		<div class="map-labels">
+			<!-- Canada labels -->
+			<label style="top: 103px; left: 210px;">AB</label>
+			<label style="top: 103px; left: 115px;">BC</label>
+			<label style="top: 103px; left: 370px;">MB</label>
+			<label style="top: 103px; left: 480px;">ON</label>
+			<label style="top: 103px; left: 650px;">QC</label>
+			<label style="top: 103px; left: 290px;">SK</label>
+			<!-- USA labels -->
+			<!-- <label style="top: 0; left: 0;">AK</label> -->
+			<label style="top: 388px; left: 495px;">AL</label>
+			<label style="top: 362px; left: 432px;">AR</label>
+			<label style="top: 369px; left: 225px;">AZ</label>
+			<label style="top: 331px; left: 132px;">CA</label>
+			<label style="top: 305px; left: 290px;">CO</label>
+			<label style="color: #FFFFFF; top: 280px; left: 660px;">CT</label>
+			<!-- <label style="top: 0; left: 0;">DC</label> -->
+			<!-- <label style="top: 0; left: 0;">DE</label> -->
+			<label style="top: 459px; left: 556px;">FL</label>
+			<label style="top: 393px; left: 531px;">GA</label>
+			<label style="top: 261px; left: 424px;">IA</label>
+			<label style="top: 243px; left: 200px;">ID</label>
+			<label style="top: 290px; left: 471px;">IL</label>
+			<label style="top: 278px; left: 501px;">IN</label>
+			<!-- <label style="top: 0; left: 0;">KD</label> -->
+			<label style="top: 311px; left: 369px;">KS</label>
+			<label style="top: 325px; left: 523px;">KY</label>
+			<label style="top: 410px; left: 432px;">LA</label>
+			<label style="color: #FFFFFF; top: 259px; left: 679px;">MA</label>
+			<!-- <label style="top: 0; left: 0;">MD</label> -->
+			<label style="top: 212px; left: 684px;">ME</label>
+			<label style="top: 251px; left: 518px;">MI</label>
+			<label style="top: 200px; left: 407px;">MN</label>
+			<label style="top: 312px; left: 428px;">MO</label>
+			<label style="top: 388px; left: 462px;">MS</label>
+			<label style="top: 187px; left: 250px;">MT</label>
+			<label style="top: 349px; left: 565px;">NC</label>
+			<label style="top: 178px; left: 345px;">ND</label>
+			<label style="top: 270px; left: 355px;">NE</label>
+			<!-- <label style="top: 0; left: 0;">NH</label> -->
+			<label style="color: #FFFFFF; top: 300px; left: 644px;">NJ</label>
+			<label style="top: 368px; left: 284px;">NM</label>
+			<label style="top: 295px; left: 170px;">NV</label>
+			<label style="top: 248px; left: 622px;">NY</label>
+			<label style="top: 303px; left: 534px;">OH</label>
+			<label style="top: 352px; left: 381px;">OK</label>
+			<label style="top: 238px; left: 128px;">OR</label>
+			<label style="top: 279px; left: 593px;">PA</label>
+			<!-- <label style="top: 0; left: 0;">RI</label> -->
+			<label style="top: 377px; left: 560px;">SC</label>
+			<label style="top: 225px; left: 348px;">SD</label>
+			<label style="top: 350px; left: 495px;">TN</label>
+			<label style="top: 398px; left: 350px;">TX</label>
+			<label style="top: 309px; left: 226px;">UT</label>
+			<label style="top: 324px; left: 585px;">VA</label>
+			<!-- <label style="top: 0; left: 0;">VT</label> -->
+			<label style="top: 180px; left: 137px;">WA</label>
+			<label style="top: 225px; left: 460px;">WI</label>
+			<label style="top: 315px; left: 555px;">WV</label>
+			<label style="top: 246px; left: 266px;">WY</label>
+		</div>
+		<!-- CANADA MAP CONTAINER -->
+		<div class="canada">
+			<div id="canada-map" style="height: 290px; position: relative; width: 829px;"></div>
+		</div>
+		<!-- USA MAP CONTAINER -->
+		<div class="usa">
+			<div id="usa-map" style="height: 347px; position: relative; width: 829px;"></div>
+		</div>
+	</div>
+
+	<!-- LEGEND -->
+	<p class="legend-title"><i class="fa fa-circle fa-lg"></i> LEGEND <i class="fa fa-circle fa-lg"></i></p>
+	<div class="legends">
+		<div class="legend">
+			<img class="pull-left" src="img/pcm-locations.png">
+			<p>PCM Locations</p>
+		</div>
+		<div class="legend">
+			<img class="pull-left" src="img/pcm-corporate-headquarters.png">
+			<p>PCM Corporate Headquarters</p>
+		</div>
+		<div class="legend">
+			<img class="pull-left" src="img/pcmg-headquarters.png">
+			<p>PCMG Headquarters</p>
+		</div>
+		<div class="legend">
+			<img class="pull-left" src="img/pcm-enterprise-headquarters.png">
+			<p>PCM Enterprise Headquarters</p>
+		</div>
+		<div class="legend">
+			<img class="pull-left" src="img/en-pointe-headquarters.png">
+			<p>En Pointe Headquarters</p>
+		</div>
+		<div class="legend">
+			<img class="pull-left" src="img/acrodex-headquarters.png">
+			<p>Acrodex Headquarters</p>
+		</div>
+		<div class="legend">
+			<img class="pull-left" src="img/ssae-16-data-center.png">
+			<p>SSAE 16 Data Center</p>
+		</div>
+		<div class="legend">
+			<img class="pull-left" src="img/pcm-integrated-operation-center.png">
+			<p>PCM Integrated Operation Center</p>
+		</div>
+		<div class="legend">
+			<img class="pull-left" src="img/iso-centers.png">
+			<p>ISO 9001:2008 Distribution &amp; Configurations Centers</p>
+		</div>
+	</div>
+
+	<!-- STATE -->
+	<div class="states">
+		<ul>
+			<li><i class="fa fa-plus-square-o"></i><span class="state CA.AB" data-toggle="modal" data-target=".modal" data-letters="Alberta">Alberta</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state CA.BC" data-toggle="modal" data-target=".modal" data-letters="British Columbia">British Columbia</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state CA" data-toggle="modal" data-target=".modal" data-letters="California">California</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state CT" data-toggle="modal" data-target=".modal" data-letters="Connecticut">Connecticut</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state FL" data-toggle="modal" data-target=".modal" data-letters="Florida">Florida</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state GA" data-toggle="modal" data-target=".modal" data-letters="Georgia">Georgia</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state ID" data-toggle="modal" data-target=".modal" data-letters="Idaho">Idaho</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state IL" data-toggle="modal" data-target=".modal" data-letters="Illinois">Illinois</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state IN" data-toggle="modal" data-target=".modal" data-letters="Indiana">Indiana</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state KY" data-toggle="modal" data-target=".modal" data-letters="Kentucky">Kentucky</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state CA.MB" data-toggle="modal" data-target=".modal" data-letters="Manitoba">Manitoba</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state MA" data-toggle="modal" data-target=".modal" data-letters="Massachusetts">Massachusetts</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state MO" data-toggle="modal" data-target=".modal" data-letters="Missouri">Missouri</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state CA.QC" data-toggle="modal" data-target=".modal" data-letters="Quebec">Quebec</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state NC" data-toggle="modal" data-target=".modal" data-letters="North Carolina">North Carolina</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state NM" data-toggle="modal" data-target=".modal" data-letters="New Mexico">New Mexico</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state NJ" data-toggle="modal" data-target=".modal" data-letters="New Jersey">New Jersey</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state OH" data-toggle="modal" data-target=".modal" data-letters="Ohio">Ohio</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state CA.ON" data-toggle="modal" data-target=".modal" data-letters="Ontario">Ontario</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state OR" data-toggle="modal" data-target=".modal" data-letters="Oregon">Oregon</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state PA" data-toggle="modal" data-target=".modal" data-letters="Pennsylvania">Pennsylvania</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state TX" data-toggle="modal" data-target=".modal" data-letters="Texas">Texas</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state UT" data-toggle="modal" data-target=".modal" data-letters="Utah">Utah</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state VA" data-toggle="modal" data-target=".modal" data-letters="Virginia">Virginia</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state WA" data-toggle="modal" data-target=".modal" data-letters="Washington">Washington</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state WI" data-toggle="modal" data-target=".modal" data-letters="Wisconsin">Wisconsin</span></li>
+			<li><i class="fa fa-plus-square-o"></i><span class="state SD" data-toggle="modal" data-target=".modal" data-letters="South Dakota">South Dakota</span></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
