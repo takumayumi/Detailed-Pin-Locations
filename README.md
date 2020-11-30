@@ -1,7 +1,9 @@
 # Detailed Pin Locations
 
-Using DataMaps, this is an example of a map containing USA and Canada only. Locations are pinned in the map and when hovered, its detail will be shown as tooltip. There are also sample legends and image shown in the map.
+Displays a map containing USA and Canada only with the following functions:
+- Locations are pinned in the map,
+- Hovered pin will show its detail as tooltip,
+- Sample legends; and
+- List of the cities with modal and its detail.
 
-Plus, a list of USA and Canada cities with active locations. And when clicked, a modal will show up with details.
-
-Take note that datamaps.none.js was also edited for positioning.
+Take note that datamaps.none.js was also edited for positioning of tooltip.
