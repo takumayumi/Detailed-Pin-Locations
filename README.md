@@ -1,4 +1,4 @@
-# Custom Detailed Pin Locations
+# Detailed Pin Locations
 
 Displays a map containing USA and Canada only with the following functions:
 - Locations are pinned in the map,
