@@ -1,4 +1,5 @@
 body {
+	background-color: #C1E1C1;
 	height: 100%;
 	margin: 100px auto;
 	padding: 0 20px;
@@ -168,7 +169,7 @@ h1 {
  =================================================== */
 
 #content .legend-title {
-	background-color: #FFFFFF;
+	background-color: #C1E1C1;
 	float: left;
 	font-size: 18px;
 	font-weight: 700;
@@ -249,7 +250,7 @@ h1 {
 	color: #000000;
 }
 #content .states ul li .state::after {
-	background: #FFFFFF;
+	background-color: #C1E1C1;
 	content: '';
 	height: 16px;
 	margin-top: -8px;
