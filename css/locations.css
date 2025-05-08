@@ -1,9 +1,9 @@
 body {
-	background-color: #C1E1C1;
-	height: 100%;
-	margin: 100px auto;
-	padding: 0 20px;
-	width: 80%;
+  background-color: #e1efe1;
+  height: 100%;
+  margin: 100px auto;
+  padding: 0 20px;
+  width: 80%;
 }
 
 /* =================================================
@@ -11,84 +11,83 @@ body {
  =================================================== */
 
 #content {
-	border-radius: 6px;
-	color: #000000;
-	font-family: 'Open Sans', sans-serif;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+  border-radius: 6px;
+  color: #000000;
+  font-family: "Open Sans", sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 #content * {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 #content circle {
-	pointer-events: none;
+  pointer-events: none;
 }
 h1 {
-	margin-bottom: 100px;
-	text-align: center;
-	text-decoration: underline;
+  margin-bottom: 100px;
+  text-align: center;
+  text-decoration: underline;
 }
 #content h4 {
-	font-weight: 700;
-	color: #FFFFFF;
-	font-size: 20px;
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
 }
 #content p {
-	line-height: 1.4em;
-	margin: 0;
-	padding: 0;
+  line-height: 1.4em;
+  margin: 0;
+  padding: 0;
 }
 #content path {
-	fill: rgb(240, 239, 239);
+  fill: rgb(240, 239, 239);
 }
-
 
 /* =================================================
  * LOCATION MAP
  =================================================== */
 
 #content .map-labels {
-	display: block;
-	margin: 0 auto;
-	position: relative;
-	width: 829px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 829px;
 }
 #content .map-labels label {
-	font-size: 10px;
-	font-weight: 700;
-	pointer-events: none;
-	position: absolute;
-	z-index: 14;
+  font-size: 10px;
+  font-weight: 700;
+  pointer-events: none;
+  position: absolute;
+  z-index: 14;
 }
 #content .map {
-	background-color: #006298;
-	border-radius: 6px;
-	height: 500px;
+  background-color: #006298;
+  border-radius: 6px;
+  height: 500px;
 }
 #content .map .canada {
-	z-index: 10;
+  z-index: 10;
 }
 #content .map .canada #canada-map {
-	display: block;
-	margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 #content .map .usa {
-	pointer-events: none;
+  pointer-events: none;
 }
 #content .map .usa #usa-map {
-	display: block;
-	margin: -137px auto 0;
-	/*padding: 0 0 0 11px;*/
+  display: block;
+  margin: -137px auto 0;
+  /*padding: 0 0 0 11px;*/
 }
 #content .map .usa #usa-map path {
-	pointer-events: auto;
+  pointer-events: auto;
 }
 
 /* =================================================
@@ -96,189 +95,186 @@ h1 {
  =================================================== */
 
 #content .hover-body {
-	padding: 0 20px;
+  padding: 0 20px;
 }
 #content .modal-dialog {
-	width: 582px;
+  width: 582px;
 }
 #content .hoverinfo .hover-header,
 .modal-dialog .modal-content .modal-header {
-	background-color: #D12233;
-	padding: 15px;
+  background-color: #d12233;
+  padding: 15px;
 }
 #content .modal-dialog .modal-content .modal-header .close {
-	border: 1px solid #FFFFFF;
-	color: #FFFFFF;
-	font-size: 13px;
-	font-weight: 400;
-	margin: 0;
-	opacity: 1;
-	padding: 2px 8px 6px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+  opacity: 1;
+  padding: 2px 8px 6px;
 }
 #content .modal-dialog .modal-content .modal-header .close:hover {
-	color: #FFFFFF;
-	opacity: 0.8;
+  color: #ffffff;
+  opacity: 0.8;
 }
 #content .modal-dialog .modal-content {
-	border: none;
-	border-radius: 0;
+  border: none;
+  border-radius: 0;
 }
 #content .modal-dialog .modal-content .modal-body {
-	background-color: #FFFFFF;
-	border: none;
-	padding: 0 20px;
+  background-color: #ffffff;
+  border: none;
+  padding: 0 20px;
 }
 #content .per-city {
-	display: inline-block;
-	clear: both;
-	border-bottom: 1px solid #B7B7B7;
-	font-size: 12px;
-	height: 131px;
-	padding: 18px 0 30px;
-	position: relative;
-	vertical-align: middle;
-	width: 270px;
+  display: inline-block;
+  clear: both;
+  border-bottom: 1px solid #b7b7b7;
+  font-size: 12px;
+  height: 131px;
+  padding: 18px 0 30px;
+  position: relative;
+  vertical-align: middle;
+  width: 270px;
 }
 #content .per-city:nth-child(even) .city-content {
-	margin: 0 0 0 20px;
+  margin: 0 0 0 20px;
 }
 #content .per-city .city-content .city-img,
 #content .per-city .city-content .city-info {
-	position: absolute;
-	top: 50%;
-	transform: translate(0, -50%);
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 #content .per-city .city-content .city-img {
-	width: 75px;
+  width: 75px;
 }
 #content .per-city .city-content .city-info {
-	display: inline-block;
-	margin: 0 0 0 75px;
-	padding: 0 0 0 20px;
-	word-wrap: break-word;
-	width: 175px;
+  display: inline-block;
+  margin: 0 0 0 75px;
+  padding: 0 0 0 20px;
+  word-wrap: break-word;
+  width: 175px;
 }
 #content .per-city .city-content .city-info .cityname {
-	font-size: 15px;
-	font-weight: 700;
+  font-size: 15px;
+  font-weight: 700;
 }
-
 
 /* =================================================
  * LEGEND
  =================================================== */
 
 #content .legend-title {
-	background-color: #C1E1C1;
-	float: left;
-	font-size: 18px;
-	font-weight: 700;
-	margin: 26px 0 0 52px;
-	position: absolute;
-	z-index: 10;
+  background-color: #e1efe1;
+  float: left;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 26px 0 0 52px;
+  position: absolute;
+  z-index: 10;
 }
 #content .legend-title i {
-	color: #ACACAC;
-	font-size: 12px;
-	margin-top: -4px;
-	vertical-align: middle;
+  color: #acacac;
+  font-size: 12px;
+  margin-top: -4px;
+  vertical-align: middle;
 }
 #content .legends {
-	border: 1px solid #ACACAC;
-	border-radius: 5px;
-	margin: 37px 0 31px;
-	padding: 38px 20px 10px 52px;
-	position: relative;
+  border: 1px solid #acacac;
+  border-radius: 5px;
+  margin: 37px 0 31px;
+  padding: 38px 20px 10px 52px;
+  position: relative;
 }
 #content .legends .legend {
-	align-items: center;
-	display: inline-flex;
-	font-size: 11px;
-	margin: 0 0 22px 0;
-	padding: 0 20px 0 0;
-	position: relative;
-	vertical-align: middle;
-	width: 19%;
+  align-items: center;
+  display: inline-flex;
+  font-size: 11px;
+  margin: 0 0 22px 0;
+  padding: 0 20px 0 0;
+  position: relative;
+  vertical-align: middle;
+  width: 19%;
 }
 #content .legends .legend img,
 #content .legends .legend p {
-	display: inline-block;
+  display: inline-block;
 }
 #content .legends .legend img {
-	width: 25px;
+  width: 25px;
 }
 #content .legends .legend p {
-	margin: 0 0 0 10px;
+  margin: 0 0 0 10px;
 }
 #content .legends .legend:last-child {
-	width: 27%;
+  width: 27%;
 }
 
-
- /* ================================================
+/* ================================================
  * STATE LIST
  =================================================== */
 
 #content .states {
-	padding: 0 10%;
+  padding: 0 10%;
 }
 #content .states ul {
-	list-style: none;
-	padding: 0 !important;
-	-moz-column-count: 3;
-	-webkit-column-count: 3;
-	column-count: 3;
+  list-style: none;
+  padding: 0 !important;
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
 }
 #content .states ul li {
-	font-size: 14px;
-	margin: 0 0 15px;
-	position: relative;
+  font-size: 14px;
+  margin: 0 0 15px;
+  position: relative;
 }
 #content .states ul li i {
-	color: #5093b9;
-	padding: 5px 0 0;
-	position: absolute;
-	z-index: 3;
+  color: #5093b9;
+  padding: 5px 0 0;
+  position: absolute;
+  z-index: 3;
 }
 #content .states ul li .state {
-	cursor: pointer;
-	margin: 0 0 0 20px;
-	position: relative;
-	overflow: hidden;
+  cursor: pointer;
+  margin: 0 0 0 20px;
+  position: relative;
+  overflow: hidden;
 }
 #content .states ul li .state:hover {
-	color: #000000;
+  color: #000000;
 }
 #content .states ul li .state::after {
-	background-color: #C1E1C1;
-	content: '';
-	height: 16px;
-	margin-top: -8px;
-	position: absolute;
-	right: 0;
-	transform: translate3d(-100%,0,0);
-	transition: transform 0.4s;
-	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-	top: 50%;
-	width: 100%;
+  background-color: #e1efe1;
+  content: "";
+  height: 16px;
+  margin-top: -8px;
+  position: absolute;
+  right: 0;
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 0.4s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  top: 50%;
+  width: 100%;
 }
 #content .states ul li .state:hover::after {
-	transform: translate3d(100%,0,0);
+  transform: translate3d(100%, 0, 0);
 }
 #content .states ul li .state::before {
-	content: attr(data-letters);
-	position: absolute;
-	z-index: 2;
-	overflow: hidden;
-	color: #5093b9;
-	white-space: nowrap;
-	width: 0%;
-	transition: width 0.4s 0.3s;
+  content: attr(data-letters);
+  position: absolute;
+  z-index: 2;
+  overflow: hidden;
+  color: #5093b9;
+  white-space: nowrap;
+  width: 0%;
+  transition: width 0.4s 0.3s;
 }
 #content .states ul li .state:hover::before {
-	width: 100%;
+  width: 100%;
 }
-
 
 /* ================================================
  * RESPONSIVENESS
@@ -286,55 +282,55 @@ h1 {
 
 /* For pcmph */
 @media only screen and (max-width: 1133px) {
-	#content .map {
-		display: none;
-	}
+  #content .map {
+    display: none;
+  }
 }
 /* Default */
 @media only screen and (max-width: 1024px) {
-	#content .legends .legend {
-		width: 24%;
-	}
-	#content .legends .legend:last-child {
-		width: 36%;
-	}
+  #content .legends .legend {
+    width: 24%;
+  }
+  #content .legends .legend:last-child {
+    width: 36%;
+  }
 }
 @media only screen and (max-width: 860px) {
-	#content .states ul {
-		-moz-column-count: 2;
-		-webkit-column-count: 2;
-		column-count: 2;
-	}
+  #content .states ul {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
 }
 @media only screen and (max-width: 800px) {
-	#content .legends .legend,
-	#content .legends .legend:last-child {
-		width: 32%;
-	}
+  #content .legends .legend,
+  #content .legends .legend:last-child {
+    width: 32%;
+  }
 }
 @media only screen and (max-width: 695px) {
-	#content .legends .legend {
-		width: 49%;
-	}
-	#content .legends .legend:last-child {
-		width: 100%;
-	}
+  #content .legends .legend {
+    width: 49%;
+  }
+  #content .legends .legend:last-child {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 510px) {
-	#content .states {
-		padding: 0 32px;
-	}
+  #content .states {
+    padding: 0 32px;
+  }
 }
 @media only screen and (max-width: 480px) {
-	#content .legends .legend {
-		width: 100%;
-	}
-	#content .states {
-		padding: 0 45px;
-	}
-	#content .states ul {
-		-moz-column-count: 1;
-		-webkit-column-count: 1;
-		column-count: 1;
-	}
+  #content .legends .legend {
+    width: 100%;
+  }
+  #content .states {
+    padding: 0 45px;
+  }
+  #content .states ul {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
 }
